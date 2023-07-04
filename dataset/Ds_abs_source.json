@@ -1,0 +1,40 @@
+{
+	"name": "Ds_abs_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_abs",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "employee.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "empid",
+				"type": "String"
+			},
+			{
+				"name": " name",
+				"type": "String"
+			},
+			{
+				"name": " country",
+				"type": "String"
+			},
+			{
+				"name": " department",
+				"type": "String"
+			}
+		]
+	}
+}
